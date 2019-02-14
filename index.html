@@ -1,0 +1,263 @@
+<!DOCTYPE html><html><head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="res/css/style.css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style_common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style3.css" />
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+		<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Demo binding and preparation, no need to read this part
+			 */
+				//borrowed from jQuery easing plugin
+				//http://gsgd.co.uk/sandbox/jquery.easing.php
+				$.easing.elasout = function(x, t, b, c, d) {
+					var s=1.70158;var p=0;var a=c;
+					if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+					if (a < Math.abs(c)) { a=c; var s=p/4; }
+					else var s = p/(2*Math.PI) * Math.asin (c/a);
+					return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+				};
+
+			// This one is important, many browsers don't reset scroll on refreshes
+			// Reset all scrollable panes to (0,0)
+			$('div.pane').scrollTo(0);
+			// Reset the screen to (0,0)
+			$.scrollTo(0);
+			
+			// TOC, shows how to scroll the whole window
+			$('#toc a').click(function() {//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+				$.scrollTo(this.hash, 1500, { easing:'elasout' });
+				$(this.hash).find('span.message').text(this.title);
+				return false;
+			});
+	
+			// Settings examples bindings, they will all scroll to the same place, with different settings
+			var $settings = $('#pane-settings');
+			$('#my-projects a').click(function() {
+				// before each animation, reset to (0,0), skip this.
+				$settings.stop(true).scrollTo(0);
+			});
+
+		});
+	</script>
+		<style>
+
+	body {background:#282828 url(images/texture.jpg); font-size: 100%; font-family:Georgia, serif;}
+	.wrap {width:75%; margin:0 auto; overflow: hidden; text-align: center;}
+	ul {width: 850px;margin:6em auto; padding:0;}
+
+	
+	.floatingHead {
+		width:200px;
+		padding:2em 1em 1em 1em; 		
+		text-align: center;	
+		
+		-webkit-transition: all 300ms ease-out;
+		   -moz-transition: all 300ms ease-out;
+		    -ms-transition: all 300ms ease-out; 
+		     -o-transition: all 300ms ease-out;
+		        transition: all 300ms ease-out;
+	}		
+	.floatingHead img {
+		margin:auto;
+		display:block;		
+		
+		-webkit-transform: scale(.9);
+		   -moz-transform: scale(.9);
+		    -ms-transform: scale(.9);
+		     -o-transform: scale(.9));		
+		        transform: scale(.9);
+	
+		-webkit-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		   -moz-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		    -ms-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		     -o-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		        transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}	
+	.floatingHead:hover {
+		background-color:white;
+		background-color: rgba(200,200,200,.3);
+		-webkit-border-radius: 10px;
+		border-radius: 10px;		
+		cursor: pointer;
+	}	
+	.floatingHead:hover img {
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1));
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}	
+	.floatingHead:hover h2 {
+		color:#c9a833;		
+	}	
+			
+	.floatingHead h2 {
+		font-weight: bold;
+		font-style: italic;
+		font-family:Arial, sans-serif;
+		font-size:1.2em;
+		color:#da581f;
+		margin:1em 0 0 0;
+	}
+	.floatingHead p {
+		color: #fcfcfc;
+		font-family:Arial, sans-serif;
+		font-size:.8em;
+		margin:.5em 0 1em 0;
+	}
+	
+</style>	 
+		<title>Zivs On T2</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="extra_headtag" content="" /><meta name="title" content="" /><meta name="keywords" content="" /><meta name="description" content="" /><meta property="fb:app_id"      content="163149743769497" /><meta property="og:type"        content="website" /><meta property="og:title" content=""/> <meta property="og:description" content=""/><meta property="og:image" content=""/><meta property="og:site_name" content=""/><meta property="fb:admins" content="192580217445561"/><meta name="HandheldFriendly" content="true" /><meta name="viewport" content="width=1100, height=3200, minimum-scale=0.25, maximum-scale=3" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="viewport" content="target-densitydpi=device-dpi" /><link id="favicon" rel="shortcut icon" href="" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/jslib/jquery-ui.min.js"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/sttc/jquery.form.js"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/sttc/contact.js"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/js/Skins/Menu/minimalDropdown.js"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/js/Skins/Item/itemDesign.js"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/js/Skins/Item/slideDesign.js"></script><link type="text/css" rel="Stylesheet" href="http://d2c8yne9ot06t4.cloudfront.net/static/js/Skins/Item/itemDesign.css" /><link type="text/css" rel="Stylesheet" href="http://d2c8yne9ot06t4.cloudfront.net/static/js/Skins/Item/slideDesign.css" /><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/sttc/slideshow_188.js"></script><script type="text/javascript" src="http://d2c8yne9ot06t4.cloudfront.net/static/sttc/jquery.scrollTo-min.js"></script><link type="text/css" rel="Stylesheet" href="http://d2c8yne9ot06t4.cloudfront.net/static/fonts/stylesheet.css" /><script> function init(){slideshow.init();} </script><link type="text/css" rel="Stylesheet" href="http://d2c8yne9ot06t4.cloudfront.net/static/sttc/slideshow.css" /><link type="text/css" rel="Stylesheet" href="http://d2c8yne9ot06t4.cloudfront.net/static/js/Skins/Menu/minimalDropdown.css" /></head><body vbid='B1BE0B7BB24742EC94F3151925500AC6' domain='http://app.imcreator.com' data-saveversion='5' onload='' style='background-color:rgb(255, 255, 255);background-position-x:center;background-position-y:center;background-repeat:no-repeat;background-attachment:fixed;background-image:url("http://lh5.ggpht.com/041s7KGAPw14boFjEmivwx8k3n2GfOIKi3Vx8dwYHUsdLurCX8S-lt-YevLDiMyu26rImB0_gSmjZqvefPItg2J1p9c"); position:absolute; width:100%; height:100%; margin:0px;'><div id='strechedBg' bgWidth='1200' bgHeight='674'><img id='strechedImg' src='http://lh5.ggpht.com/041s7KGAPw14boFjEmivwx8k3n2GfOIKi3Vx8dwYHUsdLurCX8S-lt-YevLDiMyu26rImB0_gSmjZqvefPItg2J1p9c=s1200'></img></div><div class='wrapperer'><div class='page' style='position:relative;margin:0px auto;width:1100px;height:3200px;overflow:hidden;overflow:visible;'>
+			<div class='ParagraphBox '  style='position:absolute;left:5px;top:1691px;z-index:10007;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1140px;height:312px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1089px;height:312px;overflow:hidden;'><p style="text-align: center;"><span style="font-family:georgia;"><span style="font-size:48px;">About me</span></span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="background-color: transparent; color: rgb(105, 105, 105); font-family: 'times new roman', timesnewromanregular, times, serif; font-size: 26px; line-height: 1.2;">*</span></p><p style="text-align: center;"><span style="line-height:1.2;"><span style="font-family:dosis light;"><span style="font-size: 18px; background-color: transparent;">Ziv Shahaf.&nbsp;</span></span></span></p><p style="text-align: center;"><span style="line-height:1.2;"><span style="font-family:dosis light;"><span style="font-size:18px;">Born in 1988, Israel</span></span></span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="line-height:1.2;"><span style="font-family:dosis light;"><span style="font-size:18px;">4th year undergraduate&nbsp;software engineering student at the Technion, Israel.</span></span></span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="line-height:1.2;"><span style="font-family:dosis light;"><span style="font-size:18px;">Currently working at Intel's Perceptual Computing department </span></span></span></p><p style="text-align: center;"><span style="line-height:1.2;"><span style="font-family:dosis light;"><span style="font-size:18px;">with&nbsp;<a target="_blank" class="link-to-website" href="http://www.intel.com/content/www/us/en/architecture-and-technology/realsense-overview.html"><u>Intel's RealSense Technology</u></a> and <u><a target="_blank" class="link-to-website" href="https://software.intel.com/en-us/perceptual-computing-sdk">Intel's Perceptual Computing SDK</a>.</u></span></span></span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="line-height:1.2;"><span style="font-family:dosis light;"><span style="font-size:18px;">That's my dog, John, in the background :)</span></span></span></p><p><br>&nbsp;</p>&nbsp;<p style="margin-left: 0px; margin-top: 0px;">&nbsp;</p><p>&nbsp;</p><p style="margin-left: 0px; margin-top: 0px;">&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p style="margin-left: 0px; margin-top: 0px;">&nbsp;</p><p style="margin-left: 0px; margin-top: 0px;">&nbsp;</p><p>&nbsp;</p>
+			</div>
+			<div class="container" style='position:absolute;left:67px;top:2070px;z-index:10011;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+				<div id="content-slider">
+					<div id="slider">
+						<div id="mask">
+						<ul>
+						<li id="first" class="firstanimation">
+						<a href="https://www.facebook.com/media/set/?set=a.10153378670614670.1073741827.742289669&type=1&l=eba01b2dff">
+						<img src="images/img_1.jpg" alt="John1"/>
+						</a>
+						<div class="tooltip">
+						<h1>Thug Life</h1>
+						</div>
+						</li>
+
+						<li id="second" class="secondanimation">
+						<a href="https://www.facebook.com/media/set/?set=a.10153378670614670.1073741827.742289669&type=1&l=eba01b2dff">
+						<img src="images/img_2.jpg" alt="John2"/>
+						</a>
+						<div class="tooltip">
+						<h1>Whoof</h1>
+						</div>
+						</li>
+						
+						<li id="third" class="thirdanimation">
+						<a href="https://www.facebook.com/media/set/?set=a.10153378670614670.1073741827.742289669&type=1&l=eba01b2dff">
+						<img src="images/img_3.jpg" alt="John3"/>
+						</a>
+						<div class="tooltip">
+						<h1>Down The Road</h1>
+						</div>
+						</li>
+									
+						<li id="fourth" class="fourthanimation">
+						<a href="https://www.facebook.com/media/set/?set=a.10153378670614670.1073741827.742289669&type=1&l=eba01b2dff">
+						<img src="images/img_4.jpg" alt="John4"/>
+						</a>
+						<div class="tooltip">
+						<h1>Standing Tall</h1>
+						</div>
+						</li>
+									
+						<li id="fifth" class="fifthanimation">
+						<a href="https://www.facebook.com/media/set/?set=a.10153378670614670.1073741827.742289669&type=1&l=eba01b2dff">
+						<img src="images/img_5.jpg" alt="John5"/>
+						</a>
+						<div class="tooltip">
+						<h1>After The Rain</h1>
+						</div>
+						</li>
+						</ul>
+						</div>
+						<div class="progress-bar"></div>
+					</div>
+				</div>
+			</div>
+			<div class='ParagraphBox '  style='position:absolute;left:6px;top:3156px;z-index:10004;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1136px;height:24px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1085px;height:24px;overflow:hidden;'><div class='innerText'><p style="margin: 0px; text-align: center;"><span style="font-family: arial, ArialRegular, helvetica, sans-serif; font-size: 12px;"><span style="color:#A9A9A9;">All Rights reserved to<a target="_blank" class="link-to-website" href="http://www.flickr.com/photos/jonathankosread/">&nbsp;</a></span><strong><span style="color:#FFFFFF;"><a target="_blank" class="link-to-email" href="mailto:zivs@campus.technion.ac.il"></a></span></strong><a target="_blank" class="link-to-email" href="mailto:zivs@campus.technion.ac.il"><strong><span style="color:#FFFFFF;">Ziv Shahaf</span></strong></a></span></p></div>
+			</div>
+			<div class='strechH ' style='position:absolute;left:-214px;top:2496px;z-index:10002;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1668px;height:626px;overflow:hidden;background-color:rgba(0, 0, 0 , 0.9);background-position-x:undefined;background-position-y:undefined;background-repeat:undefined;background-attachment:undefined;border-width:0px;border-style:solid;border-color:transparent;border-color:rgb(0, 0, 0);-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1590px;height:626px;'>
+			</div>
+			<div class='' style='position:absolute;left:16px;top:1450px;z-index:10009;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1110px;height:18px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1058px;height:18px;'><div class='dotted' style='position:absolute; left:0px; top:9px ; width:1059px ; height:50%; border-top: 1px solid; border-color: rgb(128, 128, 128)'></div>
+			</div>
+			<div class='GalleryBox ' social='true' itemsX='7' itemY='1' itemResizing='Fit' itemClick='OpenPictureLink' fitDownsize='FitDownsize' style='position:absolute;left:146px;top:2690px;z-index:10008;padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:20px;width:371px;height:50px;overflow:hidden;border-width:2px;border-style:solid;border-color:transparent;width:345px;height:46px;'>
+				<div class='PictureBox ' itemclicktype='website' social='true' style='position:relative;float:left;margin-right:5px;margin-bottom:5px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;width:46px;height:46px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:45px;height:46px;'><a href='https://www.facebook.com/ziv.shahaf' target='_blank' title=''><div class='inner-visible' style='position:relative;width:45px;height:46px;'><IMG realWidth='48' cropX='0' cropY='0.5' realHeight='48' originalSrc='http://lh5.ggpht.com/hrHTeHO9eZFyUaLHSzudup4CMnNubcEUIaCBPcQSHytFZTQznT5W4xF6Bvh1fsPZPgMPSINBAmskl3r5wqQy6e1LUQ=s45' src='http://lh5.ggpht.com/hrHTeHO9eZFyUaLHSzudup4CMnNubcEUIaCBPcQSHytFZTQznT5W4xF6Bvh1fsPZPgMPSINBAmskl3r5wqQy6e1LUQ=s45' style='position:absolute;left:0px;top:1px;width:45px;height:45px;'></IMG></div>
+				</a></div>
+				<div class='PictureBox ' itemclicktype='website' social='true' style='position:relative;float:left;margin-right:5px;margin-bottom:5px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;width:46px;height:46px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:45px;height:46px;'><a href='https://plus.google.com/u/0/+ZivShahaf' target='_blank' title=''><div class='inner-visible' style='position:relative;width:45px;height:46px;'><IMG realWidth='48' cropX='0' cropY='0.5' realHeight='48' originalSrc='http://lh6.ggpht.com/CJuRkBB3GEoy0yJcyKaW5B09V3z2NxNzxsQ4UimfiJpyNS7SqayF0KaYn8EeGw6A_cPNspjoMTnE-6pLSZm-s10AGw=s45' src='http://lh6.ggpht.com/CJuRkBB3GEoy0yJcyKaW5B09V3z2NxNzxsQ4UimfiJpyNS7SqayF0KaYn8EeGw6A_cPNspjoMTnE-6pLSZm-s10AGw=s45' style='position:absolute;left:0px;top:1px;width:45px;height:45px;'></IMG></div>
+				</a></div>
+				<div class='PictureBox ' itemclicktype='website' social='true' style='position:relative;float:left;margin-right:5px;margin-bottom:5px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;width:46px;height:46px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:45px;height:46px;'><a href='https://www.youtube.com/user/zivshahaf' target='_blank' title=''><div class='inner-visible' style='position:relative;width:45px;height:46px;'><IMG realWidth='48' cropX='0' cropY='0.5' realHeight='48' originalSrc='http://lh4.ggpht.com/VSyjCIr2WD-oBgsvJIBancp6EAQOld5vfI_Wuxql_vieSYf4gBoXzyCY9FePm5h84l83-VKae7C4c4EDrd-vATFIkXE=s45' src='http://lh4.ggpht.com/VSyjCIr2WD-oBgsvJIBancp6EAQOld5vfI_Wuxql_vieSYf4gBoXzyCY9FePm5h84l83-VKae7C4c4EDrd-vATFIkXE=s45' style='position:absolute;left:0px;top:1px;width:45px;height:45px;'></IMG></div>
+				</a></div>
+				<div class='PictureBox ' itemclicktype='website' social='true' style='position:relative;float:left;margin-right:5px;margin-bottom:5px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;width:46px;height:46px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:45px;height:46px;'><a href='https://www.linkedin.com/in/zivshahaf' target='_blank' title=''><div class='inner-visible' style='position:relative;width:45px;height:46px;'><IMG realWidth='48' cropX='0' cropY='0.5' realHeight='48' originalSrc='http://lh6.ggpht.com/raieWw5KVA9Tf_fZJkg-WQ43wX9_d48DsXvr4LOPHllQxcfHsifUYlD-d4CZb8WzPD-3bsIprWVeJR2-HmKNoBsQ=s45' src='http://lh6.ggpht.com/raieWw5KVA9Tf_fZJkg-WQ43wX9_d48DsXvr4LOPHllQxcfHsifUYlD-d4CZb8WzPD-3bsIprWVeJR2-HmKNoBsQ=s45' style='position:absolute;left:0px;top:1px;width:45px;height:45px;'></IMG></div>
+				</a></div>
+			</div>
+			<div class='strechH ' style='position:absolute;left:-214px;top:1675px;z-index:10001;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1668px;height:354px;overflow:hidden;background-color:rgba(255, 255, 255 , 0.85);background-position-x:undefined;background-position-y:undefined;background-repeat:undefined;background-attachment:undefined;border-width:0px;border-style:solid;border-color:transparent;border-color:rgb(0, 0, 0);-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1590px;height:354px;'>
+			</div>
+			<div class='googleMaps ' style='position:absolute;left:550px;top:2506px;z-index:10013;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;width:572px;height:603px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:546px;height:603px;'><iframe style='position:absolute; width:100%; height:100%;' frameBorder='0' scrolling='no' id='widget_mock' src='http://d2c8yne9ot06t4.cloudfront.net/static/sttc/googlemaps.html?settings=%7B%22Address%22%3A%22Technion%20Taub%20building%2C%20Haifa%2C%20Israel%22%2C%22ZoomLevel%22%3A%2217%22%2C%22ShowSatellite%22%3Afalse%7D'></iframe>
+			</div>
+			<div class='HtmlBox ' style='position:absolute;left:163px;top:2770px;z-index:10012;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:232px;height:77px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:222px;height:77px;'><a href="http://stackoverflow.com/users/2523211/zivs">
+<img src="http://stackoverflow.com/users/flair/2523211.png?theme=dark" width="208" height="58" alt="profile for ZivS at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for ZivS at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+</a>
+			</div>
+			<div class='' style='position:absolute;left:24px;top:885px;z-index:10011;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1110px;height:18px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1058px;height:18px;'><div class='dotted' style='position:absolute; left:0px; top:9px ; width:1059px ; height:50%; border-top: 1px solid; border-color: rgb(128, 128, 128)'></div>
+			</div>
+			<div class='strechH ' style='position:absolute;left:-214px;top:886px;z-index:10003;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1668px;height:581px;overflow:hidden;background-color:rgba(27, 25, 41 , 0.7);background-position-x:undefined;background-position-y:undefined;background-repeat:undefined;background-attachment:undefined;border-width:0px;border-style:solid;border-color:transparent;border-color:rgb(0, 0, 0);-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1590px;height:581px;'>
+			</div>
+			<div id="my-projects" class='ParagraphBox '  style='position:absolute;left:377px;top:898px;z-index:10010;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:369px;height:56px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:354px;height:56px;overflow:hidden;'><div class='innerText'><p style="font-family: arial; font-size: 48px; margin: 0px; text-align: center;" originalfontsize="48px"><span style="color:#FFFFFF;"><span style="font-family: BebasRegular; font-size: 28px; letter-spacing: 0em; line-height: 1em;">My&nbsp;Projects</span></span></p><p style="font-family: arial; font-size: 48px; margin: 0px; text-align: center;" originalfontsize="48px"><span style="line-height:1.4;"><span style="font-family:dosis light;"><span style="color:#D3D3D3;"><span style="font-size:18px;"><span style="letter-spacing: 0em;">as a student</span></span></span></span></span></p></div>
+			</div>
+			<div class="container" style='position:absolute;left:67px;top:970px;z-index:10011;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+				<div class="main">
+					<!-- THIRD EXAMPLE -->
+					<div class="view view-third">
+						<img src="images/Home.jpg" />
+						<div class="mask">
+							<h2>Home Page</h2>
+							<p>Some homework and other stuff I made</p>
+							<a href="home-.html" class="info">Explore</a>
+						</div>
+					</div>
+				   <div class="view view-third">
+						<img src="images/Vokinzhopas.jpg" />
+						<div class="mask">
+							<h2>Graphics Project</h2>
+							<p>Piano playing over a Leap Motion controller. Created using Unity</p>
+							<a href="Vokinhzopas/home.html" class="info">Enter Site</a>
+						</div>
+					</div>
+					<div class="view view-third">
+						<img src="images/WillItStand.jpg" />
+						<div class="mask">
+							<h2>3D Printing Seminar</h2>
+							<p>Finding all possible positions for making a 3D object to 'stand still'</p>
+							<a href="WillItStand/" class="info">Try It</a>
+						</div>
+					</div>
+					<div class="view view-third">
+						<img src="images/OWN.jpg" />
+						<div class="mask">
+							<h2>SEO Project</h2>
+							<p>Finding websites with a shared owner</p>
+							<a href="OWN" class="info">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='ParagraphBox '  style='position:absolute;left:-4px;top:180px;z-index:10006;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:1145px;height:788px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:1093px;height:788px;overflow:hidden;'><div class='innerText'><p style="text-align: center;">&nbsp;</p><div class="strokeText"><p style="text-align: center;"><span style="font-size:120px;"><span style="font-family:arial black,arialblackregular;"><font color="#ffffff"><span style="line-height: 57.599998474121094px;">Ziv Shahaf</span></font></span></span></p></div><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><a target="_blank" class="link-to-website" href="https://www.youtube.com/watch?v=0oGMbAIcXCQ"><font face="callunaregular"><span style="font-size: 28px; letter-spacing: 19px; line-height: 40.7272720336914px; background-color: rgb(204, 237, 95);">something something something</span></font></a></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="font-size: 28px; letter-spacing: 19px; line-height: 40.7272720336914px; font-family: callunaregular; background-color: rgb(204, 237, 95);"><a target="_blank" class="link-to-website" href="https://www.youtube.com/watch?v=0oGMbAIcXCQ">dark side...</a></span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p></div>
+			<div id="toc" class="part">
+			<a title="Scroll Down" href="#my-projects"><div class="arrow bounce"></div></a>
+			</div>
+			</div>
+			<div class='WebsiteMenuBox '  style='position:absolute;left:718px;top:37px;z-index:20000;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;width:43px;height:28px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:#000000;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:87px;height:28px;'>  <style>.WebsiteMenuBox li, a { -webkit-transition-property:color, background; -webkit-transition-duration: 0.2s, 0.2s; -webkit-transition-timing-function: linear, ease-in;} .WebsiteMenuBox li {float:left;text-decoration: none;padding-bottom:15px;padding-top:15px;padding-right:17px;padding-left:17px;margin-bottom:5px;margin-right:5px;font-size:undefined;color:rgb(217, 213, 217);font-family:Times New Roman, TimesNewRomanRegular, Times, serif;letter-spacing:0px;background-color:rgb(20, 20, 20);direction:ltr;} .WebsiteMenuBox li:hover {color:rgb(247, 247, 247);background-color:rgb(24, 49, 66);}.WebsiteMenuBox li a:link {color:rgb(217, 213, 217);}.WebsiteMenuBox li a:visited {color:rgb(217, 213, 217);}.WebsiteMenuBox li a:hover {color:rgb(247, 247, 247);}.WebsiteMenuBox li a:active {color:rgb(217, 213, 217);}.WebsiteMenuBox li:hover a {color:rgb(247, 247, 247) !important;}</style>   <ul id='topnav' style='float:left; padding: 0px; margin: 0px;'>
+			</ul></div>
+			<div class='ParagraphBox '  style='position:absolute;left:-5px;top:2494px;z-index:10005;padding-left:25px;padding-right:25px;padding-top:25px;padding-bottom:25px;width:525px;height:476px;overflow:hidden;border-width:0px;border-style:solid;border-color:transparent;border-color:rgb(0, 0, 0);-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:503px;height:476px;overflow:hidden;'><div class='innerText'><p style="margin-left: 0px; margin-top: 0px; text-align: center;"><span style="font-family:georgia;"><span style="font-size:48px;"><span style="color:#FFFFFF;"><span style="line-height: 180%;">Contact</span></span></span></span></p><p style="margin-left: 0px; margin-top: 0px; text-align: center;">&nbsp;</p><p style="margin-left: 0px; margin-top: 0px; text-align: center;"><span style="background-color: transparent; color: rgb(255, 255, 255); font-family: 'times new roman', timesnewromanregular, times, serif; font-size: 26px; line-height: 1.2;">*</span></p><p style="text-align: center;">&nbsp;</p><a href="mailto:zivs@campus.technion.ac.il"><p style="text-align: center;"><span style="font-size:16px;"><span style="font-family: arial, ArialRegular, helvetica, sans-serif; background-color: transparent; line-height: 1.2;"><span style="color:#FFFFFF;">Email: zivs@campus.technion.ac.il</span></span></span></p></a><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><br>&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p></div>
+			</div>
+			<div class="wrap" style='position:absolute;left:157px;top:2780px;z-index:10011;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+				<ul>
+				<a href="CV-Ziv_Shahaf.pdf">
+					<li class="floatingHead">
+						<img src="images/circleme.png" />
+						<h2>My Résumé</h2>
+						<p>Ziv Shahaf</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div><div class='footer' style = 'position:absolute;top:3210px;' ><a href='/sitemap.xml'>sitemap</a></div><script>init()</script></div></body></html>
